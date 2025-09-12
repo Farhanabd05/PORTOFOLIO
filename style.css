@@ -1,24 +1,42 @@
-h1, h2, h4 {
-    color: #350532;
-    font-family: Cambria;
-    text-align: center;
+:root {
+  --bg-color: #11071f;
+  --card-color: #2b215a;
+  --accent-color: #a362ff;
+  --text-color: #ccd6f6;
+  --border-color: #4f228d;
 }
 
+body {
+    background-color: var(--bg-color); 
+    font-family: Inter, Cambria, sans-serif;
+}
+
+p {
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 2px solid var(--accent-color);
+    width: 20%;
+    margin-bottom: 15px;
+}
 li {
-    color: blue;
-    font-family: Cambria;
+    color: var(--text-color);
 }
 
 .container {
     display: grid;
-    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Adds 20px space between columns and rows */
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     overflow: visible;
-}
-
-.container-logo {
-    justify-content: center;
 }
 
 .img {
@@ -33,7 +51,7 @@ li {
     margin-right: auto;
 }
 
-.img-2 {
+.img-person {
     width:150px;
     height:150px;
     border-radius: 50%;
@@ -41,21 +59,23 @@ li {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 2px groove rgb(84, 184, 45);
+    border: 2px groove var(--border-color);
 }
 .child {
     padding-bottom: 10px;
-    background-color: gray;
+    background-color: var(--card-color);
     border-radius: 0.5rem;
-    border: 2px groove black;
     margin-bottom: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
-    max-width: 500px;
+    max-width: 450px;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--card-color), #1a143c);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(163, 98, 255, 0.2);
 }
 
 .span-logo {
@@ -71,7 +91,7 @@ li {
 .project-desc {
     display: none;
     margin-top: 15px;
-    color: #333;
+    color: var(--text-color);
     font-style: italic;
 }
 
@@ -81,10 +101,9 @@ li {
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    background-color: #350532;
+    background-color: var(--accent-color);
     color: white;
     cursor: pointer;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -108,5 +127,43 @@ li {
 
 .child h4 {
     margin: 0;
-    color: #1f1f1f;
+    color: var(--text-color);
+}
+
+.page-wrapper {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.skill-category {
+    padding-bottom: 10px;
+    background-color: var(--card-color);
+    border-radius: 0.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-width: 500px;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--card-color), #1a143c);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(163, 98, 255, 0.2);
+}
+
+.skill-category h4 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.skills-container {
+    margin-top: 20px;
+    width: max-content;
+}
+.span-skills {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 4px 8px;
 }
