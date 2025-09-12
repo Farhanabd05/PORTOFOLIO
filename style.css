@@ -32,10 +32,9 @@ li {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Adds 20px space between columns and rows */
+    grid-auto-flow: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     overflow: visible;
 }
 
