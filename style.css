@@ -55,10 +55,58 @@ li {
     padding-right: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
+    max-width: 500px;
 }
 
 .span-logo {
     display: block;
     width: 200px; /* Or any specific width */
     margin: 0 auto;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.project-desc {
+    display: none;
+    margin-top: 15px;
+    color: #333;
+    font-style: italic;
+}
+
+.toggle-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #350532;
+    color: white;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toggle-checkbox:checked ~ .project-desc {
+    display: block;
+}
+
+.toggle-button .hide {
+    display: none;
+}
+
+.toggle-checkbox:checked ~ .toggle-button .hide {
+    display: block;
+}
+
+.toggle-checkbox:checked ~ .toggle-button .more {
+    display: none;
+}
+
+.child h4 {
+    margin: 0;
+    color: #1f1f1f;
 }
