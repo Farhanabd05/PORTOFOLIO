@@ -305,7 +305,7 @@ header {
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
-    /* animation: fadeInHeader 1s ease; */
+    animation: fadeInHeader 1s ease;
 }
 
 @keyframes fadeInHeader {
