@@ -185,9 +185,9 @@ nav .logo a{
 }
 
 .child img {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 18px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2px;
     border: 2px solid var(--accent-color);
     box-shadow: 0 2px 12px rgba(163, 98, 255, 0.10);
 }
@@ -286,13 +286,14 @@ footer .img:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5px; /* Adjust vertical position below the text */
+  bottom: -12px; /* Adjust vertical position below the text */
   height: 4px; /* Thickness of the line */
   background-color: var(--accent-color); /* Color of the line */
 }
 
 .section-heading-wrapper {
     text-align: center;
+    margin-bottom: 12px;
 }
 
 header {
