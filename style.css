@@ -83,8 +83,8 @@ nav .logo a{
 .span-logo {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 20px 0;
+    gap: 32px;
+    padding: 20px 0 8px 0;
 }
 
 .img-person {
@@ -104,18 +104,22 @@ nav .logo a{
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 24px;
+    padding-top: 24px;
     max-width: 450px;
     color: var(--text-color);
     background: linear-gradient(135deg, var(--card-color), #1a143c);
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 20px rgba(163, 98, 255, 0.2);
+    box-shadow: 0 2px 24px rgba(163, 98, 255, 0.13);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .child:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(163, 98, 255, 0.22);
 }
 
 .toggle-checkbox {
@@ -124,9 +128,11 @@ nav .logo a{
 
 .project-desc {
     display: none;
-    margin-top: 15px;
+    margin-top: 18px;
     color: var(--text-color);
-    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.92;
 }
 
 .toggle-button {
@@ -141,6 +147,17 @@ nav .logo a{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 1.08rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(163, 98, 255, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: auto;
+}
+
+.toggle-button:hover {
+    background-color: #8d4be6;
+    box-shadow: 0 4px 16px rgba(163, 98, 255, 0.18);
+
 }
 
 .toggle-checkbox:checked ~ .project-desc {
@@ -160,10 +177,20 @@ nav .logo a{
 }
 
 .child h4 {
-    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
     color: var(--text-color);
 }
 
+.child img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 2px 12px rgba(163, 98, 255, 0.10);
+}
 .page-wrapper {
     max-width: 800px;
     margin: auto;
@@ -190,21 +217,63 @@ nav .logo a{
   }
 }
 
+footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1.5px solid var(--border-color);
+    background: linear-gradient(90deg, #1a143c 0%, var(--card-color) 100%);
+    box-shadow: 0 -2px 24px rgba(163, 98, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    gap: 4px;
+}
+
+.footer-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.footer-motto {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
 footer .img {
     filter: brightness(0) invert(1);
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s, transform 0.3s;
+    width: 48px;
+    height: 48px;
 }
 
 footer .img:hover {
     opacity: 1;
+    transform: scale(1.18) rotate(-8deg);
 }
 
 .copyright {
     color: var(--text-color);
-    font-size: 14px;
-    opacity: 0.6;
+    font-size: 13px;
+    opacity: 0.45;
     margin-top: 25px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .text-with-line {
