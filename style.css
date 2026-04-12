@@ -115,6 +115,23 @@ nav .logo a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.github-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.github-link .github-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.1);
 }
 
 .child:hover {
@@ -184,7 +201,7 @@ nav .logo a{
     color: var(--text-color);
 }
 
-.child img {
+.child .img {
     width: 100px;
     height: 100px;
     margin-bottom: 2px;
@@ -396,4 +413,156 @@ header p {
     font-size: 1rem;
     text-align: center;
     word-break: break-all;
+}
+
+.experience-role {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience-duration {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Timeline UI */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-left {
+    flex: 0 0 160px;
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 4px;
+}
+
+.timeline-date {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.timeline-location {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 6px;
+}
+
+.timeline-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 15px;
+    bottom: -45px;
+    width: 2px;
+    background-color: var(--border-color);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin-top: 6px;
+    box-shadow: 0 0 0 4px var(--bg-color);
+}
+
+.timeline-right {
+    flex: 1;
+    padding-left: 35px;
+    text-align: left;
+}
+
+.timeline-right h3,
+.timeline-right h4,
+.timeline-right p {
+    text-align: left;
+}
+
+.timeline-role {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 6px 0;
+}
+
+.timeline-company {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.timeline-right .span-skills {
+    background-color: #2b2b2b; /* similar styling as referential image */
+    border: none;
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 650px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+    .timeline-left {
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 10px;
+        flex: none;
+        padding-left: 35px;
+    }
+    .timeline-center {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .timeline-right {
+        padding-left: 35px;
+    }
+    .timeline-line {
+        top: 25px;
+        bottom: -25px;
+    }
+    .timeline-dot {
+        margin-top: 25px;
+    }
 }
