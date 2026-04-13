@@ -39,16 +39,18 @@ nav {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
     padding: 10px 10px;
 }
 
 nav ul {
     display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    gap:30px;
+    gap: 15px;
 }
 
 nav ul li a{
@@ -66,6 +68,28 @@ nav .logo a{
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 .container {
@@ -235,6 +259,44 @@ nav .logo a{
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
+  }
+  
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* Supaya ul bisa turun ke bawah saat disembunyikan/dimunculkan */
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  nav ul {
+    display: none; /* Sembunyikan menu secara default di HP */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 10px 0 20px 0;
+    gap: 20px;
+  }
+
+  /* Tampilkan menu jika checkbox dicentang (diklik hamburger-nya) */
+  .menu-checkbox:checked ~ ul {
+    display: flex;
+  }
+
+  /* Animasi ikon hamburger berubah menjadi X */
+  .menu-checkbox:checked ~ .hamburger-btn span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-checkbox:checked ~ .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-checkbox:checked ~ .hamburger-btn span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
 
