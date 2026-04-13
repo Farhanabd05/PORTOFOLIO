@@ -6,6 +6,10 @@
   --border-color: #4f228d;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color); 
     font-family: Inter, Cambria, sans-serif;
@@ -354,6 +358,30 @@ header p {
     margin-top: 0;
 }
 
+header .download-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 14px rgba(163, 98, 255, 0.25);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .download-btn:hover {
+    background-color: #8d4be6;
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(163, 98, 255, 0.35);
+}
+
 .img-person {
     width: 140px;
     height: 140px;
@@ -536,6 +564,47 @@ header p {
     padding: 6px 14px;
     border-radius: 20px;
     opacity: 0.9;
+}
+
+/* Certifications UI */
+.cert-category-title-first {
+    margin-bottom: 20px;
+}
+
+.cert-category-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.cert-card {
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.cert-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(163, 98, 255, 0.15);
+}
+
+.cert-icon img {
+    width: 32px;
+    height: 32px;
+    /* Filter to match accent color */
+    filter: invert(47%) sepia(87%) saturate(2250%) hue-rotate(242deg) brightness(101%) contrast(102%);
+}
+
+.cert-title {
+    margin: 0;
+    font-size: 1.15rem;
 }
 
 @media screen and (max-width: 650px) {
